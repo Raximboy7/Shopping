@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Cotegory(models.Model):
@@ -10,7 +11,7 @@ class Cotegory(models.Model):
         return self.name
     
 class Product(models.Model):
-    cotegory = models.ForeignKey('Cotegory' , on_delete= models.CASCADE, related_name='product')
+    cotegory = models.ForeignKey('Cotegory' , on_delete= models.CASCADE)
     title = models.CharField(max_length=30)
     description = models.TextField()
     image = models.ImageField()
@@ -19,11 +20,11 @@ class Product(models.Model):
     
 class Order(models.Model):
     user = models.ForeignKey(
-        'auth.User',
+        User,
         on_delete = models.CASCADE,
         related_name='orders',
     )
-    title = models.ForeignKey('Product', related_name='order')
+    title = models.ForeignKey('Product',on_delete=models.CASCADE )
     name = models.CharField(max_length=30)
-    email = models.EmailField()
+    email = models.EmailField(blank=True)
     order_date = models.DateField(auto_now_add=True)
