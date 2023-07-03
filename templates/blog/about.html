@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,15 +14,15 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="{% static 'text/css'%}" href="assets/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="{% static 'text/css'%}" href="assets/css/font-awesome.css">
 
-    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-hexashop.css'%}">
 
-    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css'%}">
 
-    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css'%}">
 <!--
 
 TemplateMo 571 Hexashop
@@ -52,7 +53,7 @@ https://templatemo.com/tm-571-hexashop
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="assets/images/logo.png">
+                            <img src="{% static 'assets/images/logo.png'%}">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -64,10 +65,10 @@ https://templatemo.com/tm-571-hexashop
                             <li class="submenu">
                                 <a href="javascript:;">Pages</a>
                                 <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="products.html">Products</a></li>
-                                    <li><a href="single-product.html">Single Product</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
+                                    <li><a href="{% url 'products' %}">Products</a></li>
+                                    <li><a href="{% url 'single-product' %}">Single Product</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                 </ul>
                             </li>
                             <li class="submenu">
@@ -79,7 +80,7 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
                                 </ul>
                             </li>
-                            <li class="scroll-to-section"><a href="index.html">Explore</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'index' %}">Explore</a></li>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -98,8 +99,8 @@ https://templatemo.com/tm-571-hexashop
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
-                        <h2>About Our Company</h2>
-                        <span>Awesome, clean &amp; creative HTML5 Template</span>
+                        <h2>Kompaniyamiz haqida:</h2>
+                        <span>Hammasi chet el mahsulotlari</span>
                     </div>
                 </div>
             </div>
@@ -113,15 +114,15 @@ https://templatemo.com/tm-571-hexashop
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-image">
-                        <img src="assets/images/about-left-image.jpg" alt="">
+                        <img src="{% static 'assets/images/about-left-image.jpg'%}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="right-content">
-                        <h4>About Us &amp; Our Skills</h4>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.</span>
+                        <h4>Bizning hamkorlarimiz: </h4>
+                        <span> 'ZARA' Spanish Branch, 'Dior' France Branch, 'Burberry' UK Branch, 'Puma' Germany Branch, 'Calvin Klein' France Branch</span>
                         <div class="quote">
-                            <i class="fa fa-quote-left"></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod kon tempor incididunt ut labore.</p>
+                            <i class="fa fa-quote-left"></i><p>'Adidas' Germany Branch, 'Nike' US Branch, 'Louis Vuitten' France Branch, 'GUCCI' Italy Branch, 'Chanel' French Branch</p>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
                         <ul>
@@ -160,7 +161,7 @@ https://templatemo.com/tm-571-hexashop
                                     </ul>
                                 </div>
                             </div>
-                            <img src="assets/images/team-member-01.jpg">
+                            <img src="{% static 'assets/images/team-member-01.jpg'%}">
                         </div>
                         <div class="down-content">
                             <h4>Ragnar Lodbrok</h4>
@@ -181,7 +182,7 @@ https://templatemo.com/tm-571-hexashop
                                     </ul>
                                 </div>
                             </div>
-                            <img src="assets/images/team-member-02.jpg">
+                            <img src="{% static 'assets/images/team-member-02.jpg'%}">
                         </div>
                         <div class="down-content">
                             <h4>Ragnar Lodbrok</h4>
@@ -202,7 +203,7 @@ https://templatemo.com/tm-571-hexashop
                                     </ul>
                                 </div>
                             </div>
-                            <img src="assets/images/team-member-03.jpg">
+                            <img src="{% static 'assets/images/team-member-03.jpg'%}">
                         </div>
                         <div class="down-content">
                             <h4>Ragnar Lodbrok</h4>
@@ -229,21 +230,21 @@ https://templatemo.com/tm-571-hexashop
                     <div class="service-item">
                         <h4>Synther Vaporware</h4>
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-                        <img src="assets/images/service-01.jpg" alt="">
+                        <img src="{% static 'assets/images/service-01.jpg'%}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="service-item">
                         <h4>Locavore Squidward</h4>
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-                        <img src="assets/images/service-02.jpg" alt="">
+                        <img src="{% static 'assets/images/service-02.jpg'%}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="service-item">
                         <h4>Health Gothfam</h4>
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-                        <img src="assets/images/service-03.jpg" alt="">
+                        <img src="{% static 'assets/images/service-03.jpg'%}" alt="">
                     </div>
                 </div>
             </div>
@@ -371,19 +372,19 @@ https://templatemo.com/tm-571-hexashop
     <script src="assets/js/bootstrap.min.js"></script>
 
     <!-- Plugins -->
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/accordions.js"></script>
-    <script src="assets/js/datepicker.js"></script>
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    <script src="assets/js/slick.js"></script> 
-    <script src="assets/js/lightbox.js"></script> 
-    <script src="assets/js/isotope.js"></script> 
+    <script src="{% static 'assets/js/owl-carousel.js'%}"></script>
+    <script src="{% static 'assets/js/accordions.js'%}"></script>
+    <script src="{% static 'assets/js/datepicker.js'%}"></script>
+    <script src="{% static 'assets/js/scrollreveal.min.js'%}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js'%}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js'%}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js'%}"></script> 
+    <script src="{% static 'assets/js/slick.js'%}"></script> 
+    <script src="{% static 'assets/js/lightbox.js'%}"></script> 
+    <script src="{% static 'assets/js/isotope.js'%}"></script> 
     
     <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
+    <script src="{% static 'assets/js/custom.js'%}"></script>
 
     <script>
 
