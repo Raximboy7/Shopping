@@ -5,3 +5,8 @@ from .models import *
 admin.site.register(Cotegory)
 admin.site.register(Product)
 admin.site.register(Order)
+
+
+
+
+
