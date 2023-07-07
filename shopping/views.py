@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 
@@ -25,4 +26,4 @@ def productsView(request):
 
 def singleProductsView(request):
     ctx = {}
-    return render(request, 'blog/single-products.html')
+    return render(request, 'blog/single-product.html')
