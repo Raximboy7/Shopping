@@ -12,13 +12,19 @@ def indexView(request):
 
 
 def contactView(request):
-    ctx = {}
-    return render(request, 'blog/contact.html')
+    ctg = Cotegory.objects.all()
+    ctx = {
+        'ctg':ctg
+    }
+    return render(request, 'blog/contact.html',ctx)
 
 
 def aboutView(request):
-    ctx = {}
-    return render(request, 'blog/about.html')
+    ctg = Cotegory.objects.all()
+    ctx = {
+        'ctg':ctg
+    }
+    return render(request, 'blog/about.html',ctx)
 
 
 
@@ -33,5 +39,8 @@ def productsView(request):
 
 
 def singleProductsView(request):
-    ctx = {}
+    ctg = Cotegory.objects.all()
+    ctx = {
+        'ctg':ctg
+    }
     return render(request, 'blog/single-product.html')
