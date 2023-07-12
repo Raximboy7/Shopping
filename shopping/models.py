@@ -20,6 +20,11 @@ class Product(models.Model):
     price = models.IntegerField()
     quantity = models.IntegerField()
     
+      
+    def __str__(self) -> str:
+        return self.title
+    
+    
 class Order(models.Model):
     user = models.ForeignKey(
         User,
@@ -30,3 +35,7 @@ class Order(models.Model):
     name = models.CharField(max_length=30)
     email = models.EmailField(blank=True)
     order_date = models.DateField(auto_now_add=True)
+    
+    
+    def __str__(self) -> str:
+        return self.name
