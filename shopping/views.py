@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import *
-
 # Create your views here.
+
 
 def indexView(request):
     ctg = Cotegory.objects.all()
@@ -9,6 +9,7 @@ def indexView(request):
         'ctg':ctg
     }
     return render(request, 'blog/index.html',ctx)
+
 
 
 def contactView(request):
@@ -39,8 +40,5 @@ def productsView(request):
 
 
 def singleProductsView(request):
-    ctg = Cotegory.objects.all()
-    ctx = {
-        'ctg':ctg
-    }
-    return render(request, 'blog/single-product.html')
+    ctx = {}
+    return render(request, 'blog/single-products.html')
