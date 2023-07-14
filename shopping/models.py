@@ -26,11 +26,6 @@ class Product(models.Model):
     
     
 class Order(models.Model):
-    user = models.ForeignKey(
-        User,
-        on_delete = models.CASCADE,
-        related_name='orders',
-    )
     title = models.ForeignKey('Product',on_delete=models.CASCADE )
     name = models.CharField(max_length=30)
     email = models.EmailField(blank=True)
